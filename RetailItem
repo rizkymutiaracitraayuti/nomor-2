@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+class RetailItem{
+	public :
+		string description ;
+		int unitOnHand ;
+		double price ;
+		
+		RetailItem (string description, int unitOnHand, double price){
+			RetailItem :: description = description;
+			RetailItem :: unitOnHand = unitOnHand;
+			RetailItem :: price = price;
+		}
+		
+		void tam_menu(){
+			cout << "Description : " << description << "\t\t UnitOnHand : "  << unitOnHand << "\t\t Price : \t " << price<< endl;
+		}
+		
+};
+
+int main(){
+	RetailItem one ("Jacket", 12, 59.95 );
+	RetailItem second ("Designer Jeans", 40, 34.95);
+	RetailItem third ("Shirt", 20, 24.95);
+	
+	one.tam_menu ();
+	second.tam_menu ();
+	third.tam_menu ();
+	
+	return 0; 
+	
+}
